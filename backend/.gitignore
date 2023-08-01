@@ -1,0 +1,19 @@
+node_modules/
+WWebJS/
+www/build/
+build/
+platforms/
+plugins/
+.DS_Store
+.env
+package-lock.json
+.vscode/launch.json
+/certs
+logs/
+
+# Test sessions
+*session.json
+.wwebjs_auth/
+
+# local version cache
+.wwebjs_cache/
