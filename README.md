@@ -1,2 +1,2 @@
 # SmartNFClassifier
-Classificador Inteligente de Nota Fiscal do Consumidor utilizando OpenAI e Banco de Dados de Categorias.
+Classificador inteligente de Nota Fiscal do Consumidor utilizando OpenAI e banco de dados de categorias.
