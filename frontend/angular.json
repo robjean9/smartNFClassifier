@@ -24,13 +24,13 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "node_modules/ngx-scanner-qrcode/wasm/",
                 "output": "./assets/wasm/"
-              },
-              "src/favicon.ico",
-              "src/assets"
+              }
             ],
             "styles": ["src/styles.scss"],
             "scripts": []

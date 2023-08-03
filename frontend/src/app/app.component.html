@@ -1,12 +1,24 @@
-<!-- For camera -->
-<ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
+<div class="body">
+  <div class="main" *ngIf="!action.isLoading && !showCamera">
+    <img class="logo" src="../assets/logo.png" />
+    <button class="button" (click)="openCamera()">Escanear</button>
+  </div>
 
-<!-- data  -->
-<span>{{ action.data.value | json }}</span><!-- value -->
-<span>{{ action.data | async | json }}</span><!-- async -->
+  <!-- <p *ngIf="action.isLoading">Carregando</p> -->
 
-<!-- Loading -->
-<p *ngIf="action.isLoading">⌛ Loading...</p>
+  <div class="scanner">
+    <ngx-scanner-qrcode
+      #action="scanner"
+      (event)="readQR($event, action)"
+      [config]="config"
+    ></ngx-scanner-qrcode>
 
-<!-- start -->
-<button (click)="action.isStart ? action.stop() : action.start()">{{action.isStart ? 'Stop' : 'Start'}}</button>
+    <button class="button" *ngIf="showCamera" (click)="openCamera()">Escanear Outra Nota</button>
+  </div>
+
+  <div class="footer">
+    <span>© Feito por <a href="">Robson</a> e <a href="">Luiz Gustavo</a> ● 2023</span>
+    <br>
+    <span>Este projeto não tem relação alguma com o governo, mas bem que poderia, rs.</span>
+  </div>
+</div>
